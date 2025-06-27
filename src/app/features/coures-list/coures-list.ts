@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from '../../models/course.model';
 import { CourseService } from '../../services/course';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-coures-list',
@@ -11,10 +12,18 @@ import { CourseService } from '../../services/course';
 export class CouresList implements OnInit {
   courses: Course[] = [];
 
-  constructor(private courseService: CourseService) { }
+  constructor(private courseService: CourseService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.courseService.getCourses().subscribe({
+    this.route.queryParamMap.subscribe(params => {
+      const description = params.get('description');
+      this.loadCourses(description);
+    });
+
+  }
+
+  loadCourses(description: string | null) {
+    this.courseService.getCourses(description).subscribe({
       next: (courseData: Course[]) => {
         this.courses = courseData;
         console.log('Courses loaded:', this.courses);
@@ -23,7 +32,6 @@ export class CouresList implements OnInit {
         console.error('Error loading courses:', error);
       }
     })
-      console.log('CouresList component initialized');
   }
 
   onCourseBooked(course: Course): void {

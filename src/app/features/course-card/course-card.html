@@ -5,7 +5,8 @@
     <p>{{course.description}}</p>
     <p>{{course.duration}}</p>
     <p>{{course.level}}</p>
-    <button>Book Course</button>
+    <button (click)="onViewDetails(course.id)">View Details</button>
+    <button (click)="onCourseBooked()">Book Course</button>
     
 </div>
 }

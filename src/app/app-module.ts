@@ -7,17 +7,21 @@ import { CouresList } from './features/coures-list/coures-list';
 import { CourseCard } from './features/course-card/course-card';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { CourseDetail } from './features/course-detail/course-detail';
+import { SiteNavHeader } from './site-nav-header/site-nav-header';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     App,
     CouresList,
     CourseCard,
-    CourseDetail
+    CourseDetail,
+    SiteNavHeader
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

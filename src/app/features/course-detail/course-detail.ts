@@ -1,19 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from '../../models/course.model';
 import { CourseService } from '../../services/course';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-course-detail',
   standalone: false,
   templateUrl: './course-detail.html',
-  styleUrl: './course-detail.css'
+  styleUrls: ['./course-detail.css']
 })
-export class CourseDetail {
-    course: Course | null = null;
+export class CourseDetail implements OnInit {
+  course: Course | null = null;
 
-  constructor (private courseService: CourseService){}
+  constructor(private courseService: CourseService, private route: ActivatedRoute) {}
 
-  loadCourseById(id:number): void {
+  // loadCourseById by default
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      const courseStringId = params.get('id');
+      console.log('Course ID from route:', courseStringId); // Debug log
+      if (courseStringId) {
+        const id = +courseStringId; // Convert string to number
+        this.loadCourseById(id);
+      }
+    });
+  }
+
+  loadCourseById(id: number): void {
     this.courseService.getCourseById(id).subscribe({
       next: (courseData: Course) => {
         this.course = courseData;
@@ -22,7 +35,6 @@ export class CourseDetail {
       error: (error) => {
         console.error('Error loading course:', error);
       }
-    }) 
+    });
   }
-
 }
