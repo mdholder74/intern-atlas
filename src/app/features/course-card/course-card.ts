@@ -8,7 +8,7 @@ import { Course } from '../../models/course.model';
   styleUrl: './course-card.css'
 })
 export class CourseCard {
-  @Input() course?: Course[];
+  @Input() course?: Course;
   @Output() courseBooked = new EventEmitter<any>();
 
   onCourseBooked() {
