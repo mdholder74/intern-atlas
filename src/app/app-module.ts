@@ -5,19 +5,23 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { CouresList } from './features/coures-list/coures-list';
 import { CourseCard } from './features/course-card/course-card';
+import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { CourseDetail } from './features/course-detail/course-detail';
 
 @NgModule({
   declarations: [
     App,
     CouresList,
-    CourseCard
+    CourseCard,
+    CourseDetail
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    provideHttpClient(),
   ],
   bootstrap: [App]
 })

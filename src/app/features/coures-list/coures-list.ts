@@ -14,7 +14,15 @@ export class CouresList implements OnInit {
   constructor(private courseService: CourseService) { }
 
   ngOnInit(): void {
-    this.courses = this.courseService.getCourses();
+    this.courseService.getCourses().subscribe({
+      next: (courseData: Course[]) => {
+        this.courses = courseData;
+        console.log('Courses loaded:', this.courses);
+      },
+      error: (error) => {
+        console.error('Error loading courses:', error);
+      }
+    })
       console.log('CouresList component initialized');
   }
 
