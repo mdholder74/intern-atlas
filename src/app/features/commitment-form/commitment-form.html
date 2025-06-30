@@ -19,39 +19,45 @@
         <label for="email">Email:</label>
         <input id="email" type="email" formControlName="email" />
         @if(email?.invalid && (email?.dirty || email?.touched)) {
-        <div class="error">
-            @if(email?.errors?.['required']) {
-            <small>Email is required.</small>
-            }
-            @if(email?.errors?.['email']) {
-            <small>Please enter a valid email.</small>
-            }
-        </div>
+            <div class="error">
+                @if(email?.errors?.['required']) {
+                    <small>Email is required.</small>
+                }
+                @if(email?.errors?.['email']) {
+                    <small>Please enter a valid email.</small>
+                }
+            </div>
         }
     </div>
     <div class="form-group">
         <label for="name">Enroll in:</label>
-        <select id="committedCourseId" formControlName="committedCourseId">
+        <select id="committedCourseIds" formControlName="committedCourseIds">
             <option value="" disabled>Select a course</option>
             @for(course of courses; track course.id) {
-            <option [value]="course.id">
-                {{ course.title }}
-            </option>
+                <option [value]="course.id">
+                    {{ course.title }}
+                </option>
             }
         </select>
-        @if(committedCourseId?.invalid && (committedCourseId?.dirty || committedCourseId?.touched)) {
-        <div class="error">
-            @if(committedCourseId?.errors?.['required']) {
-            <small>Please select a course.</small>
-            }
-        </div>
+        @if(committedCourseIds?.invalid && (committedCourseIds?.dirty || committedCourseIds?.touched)) {
+            <div class="error">
+                @if(committedCourseIds?.errors?.['required']) {
+                    <small>Please select a course.</small>
+                }
+            </div>
         }
     </div>
     <button type="submit" [disabled]="commitForm.invalid">Sign up</button>
-    @if(submissionSuccess) {
-    <div class="success">
-        <p>Thanks for committing! Good Luck Learning!.</p>
-    </div>
+    @if(submissionSuccess) {   
+        <div class="success success-animated">
+            <div class="checkmark-circle">
+                <div class="background"></div>
+                <div class="checkmark"></div>
+            </div>
+            <div class="success">
+                <p>Thanks for committing! Good Luck Learning!.</p>
+            </div>
+        </div>
     }
 
     @if(submissionError) {

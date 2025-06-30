@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Course } from '../../models/course.model';
 import { CourseService } from '../../services/course';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-commitment-form',
@@ -15,23 +16,35 @@ export class CommitmentForm implements OnInit {
   submissionError: string = '';
   courses: Course[] = [];
 
-  constructor(private formBuilder: FormBuilder, private courseService: CourseService){}
+  constructor(private formBuilder: FormBuilder, private courseService: CourseService, private route: ActivatedRoute){}
 
   ngOnInit(): void {
       this.commitForm = this.formBuilder.group({
         name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
         email: ['', [Validators.required, Validators.email]],
-        committedCourseId: [null, Validators.required]
+        committedCourseIds: [null, Validators.required]
       });
 
-      this.courseService.getCourses().subscribe({
-        next: (data: Course[]) => {
-          this.courses = data;
-        },
-        error: (err) => {
-          console.error('Error fetching courses:', err);
+      let preSelectedCourseId: number | null = null;
+
+      this.route.paramMap.subscribe(params => {
+        const courseStringId = params.get('id');
+        if (courseStringId) {
+          preSelectedCourseId = +courseStringId;
         }
       });
+
+      this.courseService.getCourses().subscribe(
+        (data: Course[]) => {
+          this.courses = data;
+          if (preSelectedCourseId) {
+            this.commitForm.patchValue({ committedCourseIds: preSelectedCourseId });
+          }
+        },
+        (err: any) => {
+          console.error('Error fetching courses:', err);
+        }
+      );
   }
 
   get name() {
@@ -42,7 +55,7 @@ export class CommitmentForm implements OnInit {
     return this.commitForm.get('email');
   }
 
-  get committedCourseId() {
+  get committedCourseIds() {
     return this.commitForm.get('enrolledCourseId');
   }
 
