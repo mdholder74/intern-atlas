@@ -9,6 +9,9 @@ import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { CourseDetail } from './features/course-detail/course-detail';
 import { SiteNavHeader } from './site-nav-header/site-nav-header';
 import { CommonModule } from '@angular/common';
+import { CommitmentForm } from './features/commitment-form/commitment-form';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -16,12 +19,16 @@ import { CommonModule } from '@angular/common';
     CouresList,
     CourseCard,
     CourseDetail,
-    SiteNavHeader
+    SiteNavHeader,
+    CommitmentForm
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
+
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

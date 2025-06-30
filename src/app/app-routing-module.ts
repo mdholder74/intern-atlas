@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/courses', pathMatch: 'full' }, // Redirect empty path to home. For example localhost:4200/ chnages to /home 
   { path: 'courses', component: CouresList, title: 'Course-List' },
   { path: 'courses/:id', component: CourseDetail }, 
+  { path: 'commit-forms/:id', component: CourseDetail, title: 'Commit-Course' } // This route is for committing to a course, it uses the same component as course detail
   
 ];
 

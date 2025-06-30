@@ -22,5 +22,8 @@ export class CourseCard {
     this.router.navigate(['/courses', courseId]);
 
 }
+ onCommitToCourse(commitForm: object): void {
+   this.router.navigate(['/commit-forms', commitForm]);
+ }
 
 }
