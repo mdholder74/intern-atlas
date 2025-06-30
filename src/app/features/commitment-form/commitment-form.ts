@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Course } from '../../models/course.model';
 import { CourseService } from '../../services/course';
 import { ActivatedRoute } from '@angular/router';
+import { User } from '../../models/user.model';
 
 @Component({
   selector: 'app-commitment-form',
@@ -56,7 +57,7 @@ export class CommitmentForm implements OnInit {
   }
 
   get committedCourseIds() {
-    return this.commitForm.get('enrolledCourseId');
+    return this.commitForm.get('committedCourseIds');
   }
 
   onSubmit(): void {
@@ -64,24 +65,24 @@ export class CommitmentForm implements OnInit {
       return;
     }
 
-  //   const newUser: User = {
-  //     id: 0,
-  //     name: this.commitForm.value.name,
-  //     email: this.commitForm.value.email,
-  //     enrolledCourseIds: [this.commitForm.value.enrolledCourseId]
-  //   };
+    const newUser: User = {
+      id: 0,
+      name: this.commitForm.value.name,
+      email: this.commitForm.value.email,
+      committedCourseIds: [this.commitForm.value.commmitedCourseIds]
+    };
 
-  //   this.courseService.addUser(newUser).subscribe({
-  //     next: (user) => {
-  //       console.log('Student successfully signed up:', user);
-  //       this.submissionSuccess = true;
-  //       this.commitForm.reset();
-  //     },
-  //     error: (err) => {
-  //       console.error('Error signing up student:', err);
-  //       this.submissionError = 'There was an error submitting your sign-up. Please try again.';
-  //     }
-  //   })
+    this.courseService.addUser(newUser).subscribe({
+      next: (user) => {
+        console.log('User successfully signed up:', user);
+        this.submissionSuccess = true;
+        this.commitForm.reset();
+      },
+      error: (err) => {
+        console.error('Error signing up user:', err);
+        this.submissionError = 'There was an error submitting your sign-up. Please try again.';
+      }
+    })
   }
 
 }
