@@ -9,6 +9,6 @@ export interface Course {
     linkedInVideoUrl?: string; // URL to LinkedIn Learning video
     review?: string; // personal review of the course
     tags?: string[]; // array of tags for categorization
-    codeSnippets?: string[]; // array of code snippets related to the course
+    codeSnippet?: string; // array of code snippets related to the course
     img?: string;// URL to the course image
 }

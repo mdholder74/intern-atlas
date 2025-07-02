@@ -12,11 +12,20 @@
         <a href="{{course.linkedInVideoUrl}}" target="_blank">LinkedIn Video</a>
     </p>
     <p>Moe's Review: {{course.review}}</p>
-    <p>Tags:</p>
+    <span>Tags:</span> 
 @for (tag of course.tags; track tag) {
-  <span>{{ tag.trim() }}</span>
+    <span>{{ tag.trim() }}</span>
+  
 }
-    <p>Code Snippet: {{course.codeSnippets}}</p>
+   @if(course.codeSnippet) {
+        <div class="code-section">
+            <h3>Code Example:</h3>
+            <app-code-snippet 
+                [code]="course.codeSnippet" 
+                [title]="course.title + ' Example'">
+            </app-code-snippet>
+        </div>
+    }
     <img [src]="course.img" [alt]="course.title" width="100" height="100">
 </div>
 }

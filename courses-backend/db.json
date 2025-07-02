@@ -11,7 +11,7 @@
       "linkedInVideoUrl": "https://www.linkedin.com/learning/learning-angular-25357291/learning-angular?resume=false&u=262938922",
       "review": "Great course! Clear explanations and practical examples. Helped me understand how Signals differ from RxJS.",
       "tags": ["angular ","setup ","cli ","environment "],
-      "codeSnippet": "ng new my-angular-app",
+      "codeSnippet": "console.log('Angular environment set up!');",
       "img": "favicon.ico"
     },
     {

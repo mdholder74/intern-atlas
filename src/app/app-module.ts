@@ -11,6 +11,8 @@ import { SiteNavHeader } from './site-nav-header/site-nav-header';
 import { CommonModule } from '@angular/common';
 import { CommitmentForm } from './features/commitment-form/commitment-form';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CodeSnippet } from './features/code-snippet/code-snippet';
+
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     CourseCard,
     CourseDetail,
     SiteNavHeader,
-    CommitmentForm
+    CommitmentForm,
+    CodeSnippet
+
     
   ],
   imports: [
