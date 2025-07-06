@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
 import { CommitmentForm } from './features/commitment-form/commitment-form';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CodeSnippet } from './features/code-snippet/code-snippet';
+import { AboutSection } from './features/about-section/about-section';
+import { SummerSection } from './features/summer-section/summer-section';
 
 
 
@@ -23,7 +25,9 @@ import { CodeSnippet } from './features/code-snippet/code-snippet';
     CourseDetail,
     SiteNavHeader,
     CommitmentForm,
-    CodeSnippet
+    CodeSnippet,
+    AboutSection,
+    SummerSection
 
     
   ],
