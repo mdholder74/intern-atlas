@@ -10,13 +10,13 @@ import { Router } from '@angular/router';
 })
 export class CourseCard {
   @Input() course?: Course;
-  @Output() courseBooked = new EventEmitter<any>();
+  // @Output() courseBooked = new EventEmitter<any>();
 
     constructor(private router: Router) {}
 
-  onCourseBooked() {
-    this.courseBooked.emit(this.course);
-  }
+  // onCourseBooked() {
+  //   this.courseBooked.emit(this.course);
+  // }
 
   onViewDetails(courseId: number): void {
     this.router.navigate(['/courses', courseId]);

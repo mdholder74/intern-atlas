@@ -9,8 +9,6 @@ import { User } from '../models/user.model';
 })
 export class CourseService {
 
-
-
   constructor(private http: HttpClient) { }
 
   private baseUrl = 'http://localhost:3000';
