@@ -1,0 +1,60 @@
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  padding: 40px;
+}
+/*handles the laying out multiple cards in a responsive, flexible grid */ 
+.card-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allows the child cards to wrap onto multiple lines if there's not enough horizontal space */
+  justify-content:space-evenly;
+   gap: 20px;/* Adds 20px of space between each card, both horizontally and vertically */
+}
+/*handles layout and perspective*/
+.card {
+    flex: 0 1 calc(20% - 40px);
+    min-width: 200px;
+    perspective: 1000px;
+    position: relative;
+
+}
+/*handles the 3D rotation*/ 
+.card-inner {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(216, 36, 12, 0.2);
+}
+.card-front {
+  background: #00b4d8;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+}
+.card-back {
+  background: white;
+  color: #333;
+  transform: rotateY(180deg);
+  font-size: 0.85em;
+  padding: 2px;
+}
