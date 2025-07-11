@@ -15,6 +15,7 @@ import { CodeSnippet } from './features/code-snippet/code-snippet';
 import { AboutSection } from './features/about-section/about-section';
 import { SummerSection } from './features/summer-section/summer-section';
 import { AgileSection } from './features/agile-section/agile-section';
+import { AzureSection } from './features/azure-section/azure-section';
 
 
 
@@ -29,7 +30,8 @@ import { AgileSection } from './features/agile-section/agile-section';
     CodeSnippet,
     AboutSection,
     SummerSection,
-    AgileSection
+    AgileSection,
+    AzureSection
 
     
   ],
