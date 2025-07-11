@@ -5,14 +5,20 @@
      - Each link uses Angular's routerLinkActive to apply the "active" class when the route is active. This helps in highlighting the current page in the navigation bar.
 -->
 <div class="site-header-container">
-    <div class="nav-links">
-        <a routerLink="/about" routerLinkActive="active">About</a>
-        <a routerLink="/summer-in-a-bottle" routerLinkActive="active">Summer in a Bottle</a>
-        <a routerLink="/courses" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}">Course List</a>
-
-    </div>
-    <div class="auth-links">
-        <a routerLink="/login" routerLinkActive="active">Login</a>
-        <a routerLink="/register" routerLinkActive="active">Register</a>
-    </div>
+  <div class="nav-links">
+    <a routerLink="/about" routerLinkActive="active">About</a>
+    <a routerLink="/summer-in-a-bottle" routerLinkActive="active"
+      >Summer in a Bottle</a
+    >
+    <a
+      routerLink="/courses"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true}"
+      >Course List</a
+    >
+  </div>
+  <div class="auth-links">
+    <a routerLink="/login" routerLinkActive="active">Login</a>
+    <a routerLink="/register" routerLinkActive="active">Register</a>
+  </div>
 </div>

@@ -6,13 +6,13 @@ import { Router } from '@angular/router';
   selector: 'app-course-card',
   standalone: false,
   templateUrl: './course-card.html',
-  styleUrl: './course-card.css'
+  styleUrl: './course-card.css',
 })
 export class CourseCard {
   @Input() course?: Course;
   // @Output() courseBooked = new EventEmitter<any>();
 
-    constructor(private router: Router) {}
+  constructor(private router: Router) {}
 
   // onCourseBooked() {
   //   this.courseBooked.emit(this.course);
@@ -20,11 +20,9 @@ export class CourseCard {
 
   onViewDetails(courseId: number): void {
     this.router.navigate(['/courses', courseId]);
-
-}
- onCommitToCourse(): void {
-  if (this.course?.id)
-   this.router.navigate(['/commit-forms', this.course.id]);
- }
-
+  }
+  onCommitToCourse(): void {
+    if (this.course?.id)
+      this.router.navigate(['/commit-forms', this.course.id]);
+  }
 }

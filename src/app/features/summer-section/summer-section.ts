@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-summer-section',
   standalone: false,
   templateUrl: './summer-section.html',
-  styleUrl: './summer-section.css'
+  styleUrl: './summer-section.css',
 })
-export class SummerSection {
-
-}
+export class SummerSection {}

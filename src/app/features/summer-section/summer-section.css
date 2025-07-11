@@ -5,7 +5,7 @@ body {
   background: linear-gradient(135deg, #f9f9f9, #ffffff);
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   color: #333;
 }
 
@@ -13,14 +13,13 @@ header {
   text-align: center;
   margin: 0;
   font-size: 2em;
-
 }
 
 header p {
-    font-size: 16px;
-  }
+  font-size: 16px;
+}
 
-.cx-team  {
+.cx-team {
   display: inline-block;
   margin-right: 12px;
   margin-top: 6px;
@@ -37,19 +36,18 @@ header p {
 .s-spacing {
   text-align: center;
   margin-top: 50px;
-
 }
 .heading {
   font-size: 2em;
 }
 
-.content-green{
+.content-green {
   background-color: #a9ff70;
   border-radius: 30px;
   padding: 30px 20px 30px 20px;
 }
 
-.content-blue{
+.content-blue {
   background-color: #68e6ff;
   border-radius: 30px;
   padding: 30px 20px 30px 20px;
@@ -92,22 +90,21 @@ header p {
   margin-bottom: 50px;
 }
 
-/*handles the laying out multiple cards in a responsive, flexible grid */ 
+/*handles the laying out multiple cards in a responsive, flexible grid */
 .card-grid-agile {
   display: flex;
   flex-wrap: wrap; /* Allows the child cards to wrap onto multiple lines if there's not enough horizontal space */
-  justify-content:space-evenly;
-   gap: 20px;/* Adds 20px of space between each card, both horizontally and vertically */
+  justify-content: space-evenly;
+  gap: 20px; /* Adds 20px of space between each card, both horizontally and vertically */
 }
 /*handles layout and perspective*/
 .card {
-    flex: 0 1 calc(20% - 40px);
-    min-width: 200px;
-    perspective: 1000px;
-    position: relative;
-
+  flex: 0 1 calc(20% - 40px);
+  min-width: 200px;
+  perspective: 1000px;
+  position: relative;
 }
-/*handles the 3D rotation*/ 
+/*handles the 3D rotation*/
 .card-inner {
   width: 100%;
   height: 200px;
@@ -119,7 +116,8 @@ header p {
 .card.flipped .card-inner {
   transform: rotateY(180deg);
 }
-.card-front, .card-back {
+.card-front,
+.card-back {
   position: absolute;
   top: 0;
   left: 0;
@@ -148,7 +146,6 @@ header p {
   justify-content: center; /* horizontal */
   align-items: center;
   text-align: center;
-
 }
 
 .li-spacing {
@@ -171,7 +168,7 @@ header p {
   min-width: 250px;
   background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: max-height 0.4s ease;
   cursor: pointer;
@@ -199,65 +196,54 @@ header p {
 
 .arrow {
   font-size: 2em;
-  color: #0078D4;
+  color: #0078d4;
   margin: 0 10px;
   align-self: center;
 }
 
-
-
 .container-wrap-up {
   display: flex;
   flex-wrap: nowrap; /* Prevent wrapping to keep it side-by-side */
-  height: auto;       /* Let it size based on content */
-  max-height: 600px;  /* Limit the height */
-  overflow: hidden;   /* Hide overflow if needed */
+  height: auto; /* Let it size based on content */
+  max-height: 600px; /* Limit the height */
+  overflow: hidden; /* Hide overflow if needed */
   margin: 40px 0;
-
 }
 
+.left,
+.right {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  border-color: #68e6ff;
+  border-style: double;
+}
 
-    .left, .right {
-      flex: 1;
-      padding: 20px;
-      box-sizing: border-box;
-      border-color: #68e6ff;
-      border-style: double;
-    }
+.left {
+  background-color: #a9ff70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Georgia", serif;
+  font-size: 2.5em;
+  font-style: italic;
+  text-align: center;
+}
 
-    .left {
-      background-color: #a9ff70;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Georgia', serif;
-      font-size: 2.5em;
-      font-style: italic;
-      text-align: center;
-    }
+.right {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    .right {
-      background-color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+.message {
+  max-width: 500px;
+  margin: auto;
+  line-height: 1.5;
+}
 
-    .message {
-      max-width: 500px;
-      margin: auto;
-      line-height: 1.5;
-    }
-
-    .signature {
-      margin-top: 30px;
-      font-style:italic;
-    }
-
-
-
-
-
-
-
-
+.signature {
+  margin-top: 30px;
+  font-style: italic;
+}

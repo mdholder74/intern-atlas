@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-about-section',
   standalone: false,
   templateUrl: './about-section.html',
-  styleUrl: './about-section.css'
+  styleUrl: './about-section.css',
 })
-export class AboutSection {
-
-}
+export class AboutSection {}

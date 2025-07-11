@@ -1,6 +1,6 @@
 export interface User {
-    id: number;
-    name: string;
-    email?: string;
-    committedCourseIds?: number[];
+  id: number;
+  name: string;
+  email?: string;
+  committedCourseIds?: number[];
 }

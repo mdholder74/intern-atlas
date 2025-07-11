@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CodeSnippet } from './features/code-snippet/code-snippet';
 import { AboutSection } from './features/about-section/about-section';
 import { SummerSection } from './features/summer-section/summer-section';
+import { AgileSection } from './features/agile-section/agile-section';
 
 
 
@@ -27,7 +28,8 @@ import { SummerSection } from './features/summer-section/summer-section';
     CommitmentForm,
     CodeSnippet,
     AboutSection,
-    SummerSection
+    SummerSection,
+    AgileSection
 
     
   ],

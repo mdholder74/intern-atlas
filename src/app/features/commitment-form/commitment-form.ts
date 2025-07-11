@@ -9,7 +9,7 @@ import { User } from '../../models/user.model';
   selector: 'app-commitment-form',
   standalone: false,
   templateUrl: './commitment-form.html',
-  styleUrl: './commitment-form.css'
+  styleUrl: './commitment-form.css',
 })
 export class CommitmentForm implements OnInit {
   commitForm!: FormGroup;
@@ -17,35 +17,48 @@ export class CommitmentForm implements OnInit {
   submissionError: string = '';
   courses: Course[] = [];
 
-  constructor(private formBuilder: FormBuilder, private courseService: CourseService, private route: ActivatedRoute){}
+  constructor(
+    private formBuilder: FormBuilder,
+    private courseService: CourseService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-      this.commitForm = this.formBuilder.group({
-        name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
-        email: ['', [Validators.required, Validators.email]],
-        committedCourseIds: [null, Validators.required]
-      });
+    this.commitForm = this.formBuilder.group({
+      name: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(2),
+          Validators.maxLength(20),
+        ],
+      ],
+      email: ['', [Validators.required, Validators.email]],
+      committedCourseIds: [null, Validators.required],
+    });
 
-      let preSelectedCourseId: number | null = null;
+    let preSelectedCourseId: number | null = null;
 
-      this.route.paramMap.subscribe(params => {
-        const courseStringId = params.get('id');
-        if (courseStringId) {
-          preSelectedCourseId = +courseStringId;
+    this.route.paramMap.subscribe((params) => {
+      const courseStringId = params.get('id');
+      if (courseStringId) {
+        preSelectedCourseId = +courseStringId;
+      }
+    });
+
+    this.courseService.getCourses().subscribe(
+      (data: Course[]) => {
+        this.courses = data;
+        if (preSelectedCourseId) {
+          this.commitForm.patchValue({
+            committedCourseIds: preSelectedCourseId,
+          });
         }
-      });
-
-      this.courseService.getCourses().subscribe(
-        (data: Course[]) => {
-          this.courses = data;
-          if (preSelectedCourseId) {
-            this.commitForm.patchValue({ committedCourseIds: preSelectedCourseId });
-          }
-        },
-        (err: any) => {
-          console.error('Error fetching courses:', err);
-        }
-      );
+      },
+      (err: any) => {
+        console.error('Error fetching courses:', err);
+      }
+    );
   }
 
   get name() {
@@ -61,7 +74,7 @@ export class CommitmentForm implements OnInit {
   }
 
   onSubmit(): void {
-    if(this.commitForm.invalid) {
+    if (this.commitForm.invalid) {
       return;
     }
 
@@ -69,7 +82,7 @@ export class CommitmentForm implements OnInit {
       id: 0,
       name: this.commitForm.value.name,
       email: this.commitForm.value.email,
-      committedCourseIds: [this.commitForm.value.commmitedCourseIds]
+      committedCourseIds: [this.commitForm.value.commmitedCourseIds],
     };
 
     this.courseService.addUser(newUser).subscribe({
@@ -80,9 +93,9 @@ export class CommitmentForm implements OnInit {
       },
       error: (err) => {
         console.error('Error signing up user:', err);
-        this.submissionError = 'There was an error submitting your sign-up. Please try again.';
-      }
-    })
+        this.submissionError =
+          'There was an error submitting your sign-up. Please try again.';
+      },
+    });
   }
-
 }

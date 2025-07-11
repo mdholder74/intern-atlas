@@ -7,16 +7,19 @@ import { ActivatedRoute } from '@angular/router';
   selector: 'app-course-detail',
   standalone: false,
   templateUrl: './course-detail.html',
-  styleUrls: ['./course-detail.css']
+  styleUrls: ['./course-detail.css'],
 })
 export class CourseDetail implements OnInit {
   course: Course | null = null;
 
-  constructor(private courseService: CourseService, private route: ActivatedRoute) {}
+  constructor(
+    private courseService: CourseService,
+    private route: ActivatedRoute
+  ) {}
 
   // loadCourseById by default
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
+    this.route.paramMap.subscribe((params) => {
       const courseStringId = params.get('id');
       console.log('Course ID from route:', courseStringId); // Debug log
       if (courseStringId) {
@@ -34,7 +37,7 @@ export class CourseDetail implements OnInit {
       },
       error: (error) => {
         console.error('Error loading course:', error);
-      }
+      },
     });
   }
 }
