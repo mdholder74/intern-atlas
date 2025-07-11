@@ -178,5 +178,180 @@
         null
       ]
     }
+  ],
+  "agileCards": [
+    {
+      "id": 101,
+      "type": "Sprint Planning",
+      "items": [
+        "Team Sync Updates",
+        "Sprint Demo",
+        "Sprint Planning Goals"
+      ]
+    },
+    {
+      "id": 102,
+      "type": "Daily Stand-up",
+      "items": [
+        "Quick team sync",
+        "What was accomplished yesterday",
+        "What is planned for today",
+        "Any blockers or issues"
+      ]
+    },
+    {
+      "id": 103,
+      "type": "Refinement",
+      "items": [
+        "Details",
+        "Acceptance Criteria (AC)",
+        "Implementation Analysis",
+        "Vote on Estimation of Work",
+        "Discuss Average Vote Count",
+        "Discuss Testing Notes"
+      ]
+    },
+    {
+      "id": 104,
+      "type": "Retrospective",
+      "items": [
+        "Feedback (Anonymous)",
+        "Sprint Reflection",
+        "Input & Open Feedback",
+        "Review Key Outcomes",
+        "Action Items & Ownership"
+      ]
+    }
+  ],
+  "developmentStages": [
+    {
+      "id": 1,
+      "stage": "New Work Item",
+      "sections": [
+        {
+          "title": "Work Item Creation",
+          "steps": [
+            "A new user story, bug, or feature is created in Azure Boards.",
+            "Work items are documented with a title, description, and acceptance criteria."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "stage": "Approved",
+      "sections": [
+        {
+          "title": "Work Item Approval",
+          "steps": [
+            "Work item is reviewed during backlog refinement.",
+            "Effort is estimated using story points or time.",
+            "Acceptance criteria and requirements are confirmed.",
+            "Item is prioritized and marked 'Ready for Dev'."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "stage": "In Dev Progress",
+      "sections": [
+        {
+          "title": "In Dev Progress",
+          "steps": [
+            "Pull the latest updates from the main branch.",
+            "Go to Azure Repos and create a new branch.",
+            "Use 'feature/' for new functionality or 'bug/' for fixes. Name the branch as: [user-story-id]-[three-word-description] (e.g., 1234-update-user-profile).",
+            "Fetch the new branch in VS Code. Begin development work in your local environment.",
+            "Use QA link to simulate staging or test with QA-specific data.",
+            "Use Sales Agreement Numbers from QA or query the database.",
+            "Preview changes in local environment using the correct sales agreement.",
+            "Run unit tests in the .spec.ts files (Angular project).",
+            "Definition of Done (DoD): Ensure the story meets all acceptance criteria, tests pass, and documentation is updated.",
+            "Ensure all tests pass before committing.",
+            "Commit your changes.",
+            "Push the branch to Azure Repos."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "stage": "In PR",
+      "sections": [
+        {
+          "title": "Pull Request (PR) Guidelines",
+          "steps": [
+            "Create a PR with title: WI [user story number] | [Title of user story].",
+            "Add a description using bullet points:",
+            "  - What was changed",
+            "  - Any special considerations",
+            "  - Testing steps or notes"
+          ]
+        },
+        {
+          "title": "CI Triggered Automatically",
+          "steps": [
+            "When a PR is created or updated, the CI pipeline runs:",
+            "  - Builds the code",
+            "  - Runs automated tests (unit, integration, etc.)",
+            "  - Checks code quality (linters, formatters)"
+          ]
+        },
+        {
+          "title": "Peer Review",
+          "steps": [
+            "Developers pull the branch locally, test, and review the code.",
+            "If the CI pipeline fails, the PR is blocked until issues are resolved.",
+            "Once the code passes CI and is approved by reviewers, it can be merged."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "stage": "Ready for QA Deployment",
+      "sections": [
+        {
+          "title": "QA Prep",
+          "steps": [
+            "PR has been approved and merged into the main or staging branch.",
+            "QA environment is updated with the latest changes.",
+            "Test cases are reviewed and confirmed with the QA team."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "stage": "In QA",
+      "sections": [
+        {
+          "title": "QA Testing Process",
+          "steps": [
+            "QA engineers validate the story against acceptance criteria.",
+            "Regression testing is performed on affected areas.",
+            "Bugs or issues are logged in Azure Boards and assigned to devs.",
+            "Item is either passed or sent back to 'In Dev Progress' for fixes."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "stage": "Done",
+      "sections": [
+        {
+          "title": "Finalization",
+          "steps": [
+            "Work item has passed QA testing and meets Definition of Done.",
+            "Feature is included in production release or release candidate.",
+            "Documentation and changelogs are updated.",
+            "Item is closed in Azure Boards."
+          ]
+        }
+      ]
+    }
   ]
+
 }
