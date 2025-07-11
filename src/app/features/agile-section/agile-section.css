@@ -1,18 +1,11 @@
-/*handles the laying out multiple cards in a responsive, flexible grid */
-.card-grid-agile {
-  display: flex;
-  flex-wrap: wrap; /* Allows the child cards to wrap onto multiple lines if there's not enough horizontal space */
-  justify-content: space-evenly;
-  gap: 20px; /* Adds 20px of space between each card, both horizontally and vertically */
-}
-/*handles layout and perspective*/
+/* These styles can stay in agile-section.css or be moved here */
 .card {
   flex: 0 1 calc(20% - 40px);
   min-width: 200px;
   perspective: 1000px;
   position: relative;
 }
-/*handles the 3D rotation*/
+
 .card-inner {
   width: 100%;
   height: 200px;
@@ -21,9 +14,11 @@
   transform-style: preserve-3d;
   cursor: pointer;
 }
+
 .card.flipped .card-inner {
   transform: rotateY(180deg);
 }
+
 .card-front,
 .card-back {
   position: absolute;
@@ -35,7 +30,9 @@
   border-radius: 20px;
   padding: 10px;
   box-shadow: 0 14px 8px rgba(35, 199, 2, 0.2);
+  box-sizing: border-box;
 }
+
 .card-front {
   background: #ebda45;
   color: white;
@@ -43,17 +40,21 @@
   align-items: center;
   justify-content: center;
   font-size: 1.2em;
+  font-weight: bold;
 }
+
 .card-back {
   background: white;
   color: #333;
   transform: rotateY(180deg);
   font-size: 0.85em;
-  padding-right: px;
+  padding: 20px;
   display: flex;
-  justify-content: center; /* horizontal */
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
+
 }
 
 .li-spacing {
@@ -62,4 +63,6 @@
 
 .ul-styling {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }

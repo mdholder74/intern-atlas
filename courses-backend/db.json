@@ -51,7 +51,7 @@
       "personalNotesUrl": "https://pulte-my.sharepoint.com/:w:/p/maholder/ERt6Sa8K_hlPvgT7x-qexNYB2ElfrdJOdat1LjY0x7C7aA?e=9bWr4q",
       "officialDocsUrl": "https://angular.dev/guide/templates/binding",
       "linkedInVideoUrl": "https://www.linkedin.com/learning/learning-angular-25357291/learning-angular?resume=false&u=262938922",
-      "review": "Covers all types of binding clearly—property, event, and two-way.",
+      "review": "Covers all titles of binding clearly—property, event, and two-way.",
       "tags": ["angular", "binding", "data"],
       "codeSnippet": "<[src]=\"imageUrl\" (click)=\"onClick()\">",
       "img": "favicon.ico"
@@ -87,14 +87,14 @@
     {
       "id": 7,
       "title": "Interface",
-      "description": "Understand how interfaces in Angular help define the shape of data and enforce type safety. .",
+      "description": "Understand how interfaces in Angular help define the shape of data and enforce title safety. .",
       "duration": "1 hour",
       "difficulty": "Easy, ☕ Coffee’s Still Hot!",
       "personalNotesUrl": "https://pulte-my.sharepoint.com/:w:/p/maholder/Ef0L5QPwdIhDh6O5mwUsDT8BSFd4XixbgPtUKibjGv6YMg?e=YWEdca",
-      "officialDocsUrl": "https://www.typescriptlang.org/docs/handbook/interfaces.html",
+      "officialDocsUrl": "https://www.titlescriptlang.org/docs/handbook/interfaces.html",
       "linkedInVideoUrl": "https://www.linkedin.com/learning/learning-angular-25357291/learning-angular?resume=false&u=262938922",
-      "review": "Interfaces help enforce structure and improve type safety.",
-      "tags": ["typescript", "interfaces", "typing"],
+      "review": "Interfaces help enforce structure and improve title safety.",
+      "tags": ["titlescript", "interfaces", "typing"],
       "codeSnippet": "interface Course { title: string; duration: string; }",
       "img": "favicon.ico"
     },
@@ -180,12 +180,12 @@
   "agileEvents": [
     {
       "id": 101,
-      "type": "Sprint Planning",
+      "title": "Sprint Planning",
       "items": ["Team Sync Updates", "Sprint Demo", "Sprint Planning Goals"]
     },
     {
       "id": 102,
-      "type": "Daily Stand-up",
+      "title": "Daily Stand-up",
       "items": [
         "Quick team sync",
         "What was accomplished yesterday",
@@ -195,19 +195,19 @@
     },
     {
       "id": 103,
-      "type": "Refinement",
+      "title": "Refinement",
       "items": [
-        "Details",
+        "Discuss Details",
         "Acceptance Criteria (AC)",
         "Implementation Analysis",
-        "Vote on Estimation of Work",
+        "Estimation of Work",
         "Discuss Average Vote Count",
-        "Discuss Testing Notes"
+        "Testing Options"
       ]
     },
     {
       "id": 104,
-      "type": "Retrospective",
+      "title": "Retrospective",
       "items": [
         "Feedback (Anonymous)",
         "Sprint Reflection",

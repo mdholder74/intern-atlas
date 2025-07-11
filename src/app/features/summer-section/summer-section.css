@@ -90,6 +90,17 @@ header p {
   margin-bottom: 50px;
 }
 
+/* Handles the laying out multiple cards in a responsive, flexible grid */
+.card-grid-agile {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-evenly !important;
+  gap: 20px !important;
+}
+
+
+
+
 .container-wrap-up {
   display: flex;
   flex-wrap: nowrap; /* Prevent wrapping to keep it side-by-side */
@@ -136,3 +147,4 @@ header p {
   margin-top: 30px;
   font-style: italic;
 }
+
