@@ -133,23 +133,23 @@ app.get("/courses/:id/users", (req, res) => {
   res.json(enrolledusers);
 });
 
-app.get("/agileCards", (req, res) => {
+app.get("/agileEvents", (req, res) => {
   try {
     const data = loadData(); // Load the data from the JSON file
-    res.json(data.agileCards); // Send the agileCards array as a JSON response
+    res.json(data.agileEvents); // Send the agileEvents array as a JSON response
   } catch (error) {
-    console.error("Error loading agile cards:", error); // Log the error to the console
-    res.status(500).json({ error: "Failed to load agile cards" }); // Send a 500 Internal Server Error response
+    console.error("Error loading agile events:", error); // Log the error to the console
+    res.status(500).json({ error: "Failed to load agile events" }); // Send a 500 Internal Server Error response
   }
 });
 
-app.get("/azureCards", (req, res) => {
+app.get("/azureStage", (req, res) => {
   try {
     const data = loadData(); // Load the data from the JSON file
-    res.json(data.azureCards); // Send the azureCards array as a JSON response
+    res.json(data.azureStage); // Send the azureStage array as a JSON response
   } catch (error) {
-    console.error("Error loading azure cards:", error); // Log the error to the console
-    res.status(500).json({ error: "Failed to load azure cards" }); // Send a 500 Internal Server Error response
+    console.error("Error loading azure stage:", error); // Log the error to the console
+    res.status(500).json({ error: "Failed to load azure stage" }); // Send a 500 Internal Server Error response
   }
 });
 
