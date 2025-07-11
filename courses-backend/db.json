@@ -10,7 +10,7 @@
       "officialDocsUrl": "https://angular.dev/installation",
       "linkedInVideoUrl": "https://www.linkedin.com/learning/learning-angular-25357291/learning-angular?resume=false&u=262938922",
       "review": "Great course! Clear explanations and practical examples. Helped me understand how Signals differ from RxJS.",
-      "tags": ["angular ","setup ","cli ","environment "],
+      "tags": ["angular ", "setup ", "cli ", "environment "],
       "codeSnippet": "ng new angular-app-name --routing",
       "img": "favicon.ico"
     },
@@ -174,20 +174,14 @@
       "id": 1751315086530,
       "name": "Moe",
       "email": "maholder@pulte.com",
-      "committedCourseIds": [
-        null
-      ]
+      "committedCourseIds": [null]
     }
   ],
   "agileCards": [
     {
       "id": 101,
       "type": "Sprint Planning",
-      "items": [
-        "Team Sync Updates",
-        "Sprint Demo",
-        "Sprint Planning Goals"
-      ]
+      "items": ["Team Sync Updates", "Sprint Demo", "Sprint Planning Goals"]
     },
     {
       "id": 102,
@@ -223,7 +217,7 @@
       ]
     }
   ],
-  "developmentStages": [
+  "azureCards": [
     {
       "id": 1,
       "stage": "New Work Item",
@@ -353,5 +347,4 @@
       ]
     }
   ]
-
 }
