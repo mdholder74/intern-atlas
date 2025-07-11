@@ -83,65 +83,9 @@
       through the Software Development Life Cycle (SDLC) from ideation to
       delivery.
     </p>
-    <div class="card-grid-agile">
-      <div class="card" onclick="this.classList.toggle('flipped')">
-        <div class="card-inner">
-          <div class="card-front">Sprint Planning</div>
-          <div class="card-back">
-            <ul class="ul-styling">
-              <li class="li-spacing">Team Sync Updates</li>
-              <li class="li-spacing">Sprint Demo</li>
-              <li class="li-spacing">Sprint Planning Goals</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="card" onclick="this.classList.toggle('flipped')">
-        <div class="card-inner">
-          <div class="card-front">Daily Stand-up</div>
-          <div class="card-back">
-            <ul>
-              <li>Quick team sync</li>
-              <li>What was accomplished yesterday</li>
-              <li>What is planned for today</li>
-              <li>Any blockers or issues</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="card" onclick="this.classList.toggle('flipped')">
-        <div class="card-inner">
-          <div class="card-front">Refinement</div>
-          <div class="card-back">
-            <ol>
-              <li>Details</li>
-              <li>Acceptance Criteria (AC)</li>
-              <li>Implementation Analysis</li>
-              <li>Vote on Estimation of Work</li>
-              <li>Discuss Average Vote Count</li>
-              <li>Discuss Testing Notes</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-
-      <div class="card" onclick="this.classList.toggle('flipped')">
-        <div class="card-inner">
-          <div class="card-front">Retrospective</div>
-          <div class="card-back">
-            <ul>
-              <li>Feedback (Anonymous)</li>
-              <li>Sprint Reflection</li>
-              <li>Input & Open Feedback</li>
-              <li>Review Key Outcomes</li>
-              <li>Action Items & Ownership</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    @for (agileItem of agileEvents; track agileItem.id) {
+    <app-agile-section [event]="agileItem"></app-agile-section>
+    }
   </section>
 
   <section class="s-spacing">
@@ -150,73 +94,9 @@
       We used Azure Boards to track tasks, Azure Repos for version control, and
       Pipelines for CI/CD. These tools helped us stay organized and efficient.
     </p>
-
-    <div class="card-grid-azure">
-      <div class="card-azure" onclick="this.classList.toggle('expanded')">
-        <div class="card-header">
-          Azure Boards<br /><small>Task Created</small>
-        </div>
-        <div class="card-content">
-          Used to create and manage tasks, bugs, and features. We tracked sprint
-          progress using Kanban boards and linked work items to commits and pull
-          requests.
-        </div>
-      </div>
-      <div class="arrow">➡️</div>
-
-      <div class="card-azure" onclick="this.classList.toggle('expanded')">
-        <div class="card-header">
-          Azure Repos<br /><small>Task Created</small>
-        </div>
-        <div class="card-content">
-          Hosted our Git repositories. I contributed to feature branches,
-          submitted pull requests, and collaborated on code reviews.
-        </div>
-      </div>
-      <div class="arrow">➡️</div>
-
-      <div class="card-azure" onclick="this.classList.toggle('expanded')">
-        <div class="card-header">
-          Azure Repos<br /><small>Task Created</small>
-        </div>
-        <div class="card-content">
-          Hosted our Git repositories. I contributed to feature branches,
-          submitted pull requests, and collaborated on code reviews.
-        </div>
-      </div>
-
-      <div class="card-azure" onclick="this.classList.toggle('expanded')">
-        <div class="card-header">
-          Azure Repos<br /><small>Task Created</small>
-        </div>
-        <div class="card-content">
-          Hosted our Git repositories. I contributed to feature branches,
-          submitted pull requests, and collaborated on code reviews.
-        </div>
-      </div>
-      <div class="arrow">➡️</div>
-
-      <div class="card-azure" onclick="this.classList.toggle('expanded')">
-        <div class="card-header">
-          Azure Repos<br /><small>Task Created</small>
-        </div>
-        <div class="card-content">
-          Hosted our Git repositories. I contributed to feature branches,
-          submitted pull requests, and collaborated on code reviews.
-        </div>
-      </div>
-      <div class="arrow">➡️</div>
-
-      <div class="card-azure" onclick="this.classList.toggle('expanded')">
-        <div class="card-header">
-          Azure Repos<br /><small>Task Created</small>
-        </div>
-        <div class="card-content">
-          Hosted our Git repositories. I contributed to feature branches,
-          submitted pull requests, and collaborated on code reviews.
-        </div>
-      </div>
-    </div>
+    @for (azureItem of azureStages; track azureItem.id) {
+    <app-azure-section [stage]="azureItem"></app-azure-section>
+    }
   </section>
 
   <section class="s-spacing">

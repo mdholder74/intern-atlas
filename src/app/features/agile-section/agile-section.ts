@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AgileEventService } from '../../services/agile-event';
 import { AgileEvent } from '../../models/agile-event.model';
 
@@ -8,18 +8,8 @@ import { AgileEvent } from '../../models/agile-event.model';
   templateUrl: './agile-section.html',
   styleUrl: './agile-section.css'
 })
-export class AgileSection implements OnInit {
-  agileEvents: AgileEvent[] = [];
+export class AgileSection  {
 
-  constructor(private agileEvent: AgileEventService) {}
-
-  ngOnInit(): void {
-      this.agileEvent.getAgileEvents().subscribe({
-      next: (eventsData: AgileEvent[]) => {
-          this.agileEvents = eventsData;
-      }
-  });
-
-}
+  @Input() event!: AgileEvent; // Single Agile event that will be passed from the parent component summer-section
 
 }

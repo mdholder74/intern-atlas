@@ -1,0 +1,44 @@
+.card-grid-azure {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card-azure {
+  flex: 1 1 calc(25% - 20px); /* 4 cards per row */
+  min-width: 250px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-header {
+  background: #68e6ff;
+  color: white;
+  padding: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-content {
+  padding: 16px;
+  display: none;
+  font-size: 0.95em;
+  color: #333;
+}
+
+.card-azure.expanded .card-content {
+  display: block;
+}
+
+.arrow {
+  font-size: 2em;
+  color: #0078d4;
+  margin: 0 10px;
+  align-self: center;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AzureStageService } from '../../services/azure-stage';
 import { AzureStage } from '../../models/azure-stage.model';
 
@@ -8,16 +8,9 @@ import { AzureStage } from '../../models/azure-stage.model';
   templateUrl: './azure-section.html',
   styleUrl: './azure-section.css',
 })
-export class AzureSection implements OnInit {
-  private azureStages: AzureStage[] = [];
+export class AzureSection{
 
-  constructor(private azureStage: AzureStageService) {}
+  @Input() stage!: AzureStage; // Single Azure stage that will be passed from the parent component summer-section
 
-  ngOnInit(): void {
-    this.azureStage.getAzureStages().subscribe({
-      next: (stagesData: AzureStage[]) => {
-        this.azureStages = stagesData;
-      },
-    });
-  }
+ 
 }

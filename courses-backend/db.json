@@ -217,7 +217,7 @@
       ]
     }
   ],
-  "azureStage": [
+  "azureStages": [
     {
       "id": 1,
       "stage": "New Work Item",

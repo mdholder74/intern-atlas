@@ -20,17 +20,29 @@
   margin-bottom: 2rem;
 }
 
-.section {
+.section .lessons-container {
   margin-bottom: 2.5rem;
 }
 
 .section h2 {
   font-size: 1.5rem;
   color: #005a9e;
+  
+  margin-bottom: 1rem;
+}
+
+.lessons-container h2 {
+  font-size: 1.5rem;
+  color: #009e1a;
   margin-bottom: 1rem;
 }
 
 .section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.lessons-container ul {
   list-style: none;
   padding-left: 0;
 }
@@ -44,6 +56,19 @@
   transition: background-color 0.3s ease;
 }
 
+.lessons-container li {
+  background-color: #f4fbee;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-left: 5px solid #00d435;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
 .section li:hover {
   background-color: #d9efff;
+}
+
+.lessons-container li:hover {
+  background-color: #e5ffd9;
 }

@@ -1,1 +1,14 @@
-<p>agile-section works!</p>
+<div class="card-grid-agile">
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-front">Sprint Planning</div>
+        <div class="card-back">
+          @for(event of event.items; track event){
+          <ul class="ul-styling">
+            <li class="li-spacing">{{event.trim()}}</li>
+          </ul>
+          }
+        </div>
+      </div>
+    </div>
+  </div>

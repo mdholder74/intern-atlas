@@ -143,13 +143,13 @@ app.get("/agileEvents", (req, res) => {
   }
 });
 
-app.get("/azureStage", (req, res) => {
+app.get("/azureStages", (req, res) => {
   try {
     const data = loadData(); // Load the data from the JSON file
-    res.json(data.azureStage); // Send the azureStage array as a JSON response
+    res.json(data.azureStages); // Send the azureStages array as a JSON response
   } catch (error) {
-    console.error("Error loading azure stage:", error); // Log the error to the console
-    res.status(500).json({ error: "Failed to load azure stage" }); // Send a 500 Internal Server Error response
+    console.error("Error loading azure stages:", error); // Log the error to the console
+    res.status(500).json({ error: "Failed to load azure stages" }); // Send a 500 Internal Server Error response
   }
 });
 
