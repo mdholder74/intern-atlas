@@ -1,8 +1,6 @@
 <div class="card-grid-azure">
   <div class="card-azure" onclick="this.classList.toggle('expanded')">
-    <div class="card-header">
-      Azure Boards<br /><small>{{stage.stage}}</small>
-    </div>
+    <div class="card-header"><small>{{stage.stage}}</small></div>
     <div class="card-content">
       @for (step of stage.steps; track step){
       <ul>
@@ -11,5 +9,4 @@
       }
     </div>
   </div>
-  <div class="arrow">➡️</div>
 </div>

@@ -97,9 +97,11 @@
       We used Azure Boards to track tasks, Azure Repos for version control, and
       Pipelines for CI/CD. These tools helped us stay organized and efficient.
     </p>
-    @for (azureItem of azureStages; track azureItem.id) {
-    <app-azure-section [stage]="azureItem"></app-azure-section>
-    }
+    <div>
+      @for (azureItem of azureStages; track azureItem.id) {
+      <app-azure-section [stage]="azureItem"></app-azure-section>
+      }
+    </div>
   </section>
 
   <section class="s-spacing">

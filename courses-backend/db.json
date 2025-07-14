@@ -223,55 +223,54 @@
       "stage": "New Work Item",
       "steps": [
         "A new user story, bug, or feature is created in Azure Boards.",
-        "Work items are documented with a title, description, and acceptance criteria."
+        "Work items are documented with a clear title, detailed description, and acceptance criteria.",
+        "The item is categorized (e.g., User Story, Bug, Task, Epic) based on the work type.",
+        "The team assigns a priority, sets the area and iteration paths, and adds relevant tags for classification.",
+        "The work item remains in this state until it is reviewed and approved for development."
       ]
     },
     {
       "id": 2,
       "stage": "Approved",
       "steps": [
-        "Work item is reviewed during backlog refinement.",
-        "Effort is estimated using story points or time.",
-        "Acceptance criteria and requirements are confirmed.",
-        "Item is prioritized and marked 'Ready for Dev'."
+        "The work item is reviewed by the team during backlog refinement meetings.",
+        "Effort is estimated using story points.",
+        "Acceptance criteria and requirements are validated and finalized.",
+        "The item is prioritized, approved, and marked as 'Ready for Development'."
       ]
     },
     {
       "id": 3,
       "stage": "In Dev Progress",
       "steps": [
-        "Pull the latest updates from the main branch.",
-        "Go to Azure Repos and create a new branch.",
-        "Use 'feature/' for new functionality or 'bug/' for fixes. Name the branch as: [user-story-id]-[three-word-description] (e.g., 1234-update-user-profile).",
-        "Fetch the new branch in VS Code. Begin development work in your local environment.",
-        "Use QA link to simulate staging or test with QA-specific data.",
-        "Use Sales Agreement Numbers from QA or query the database.",
-        "Preview changes in local environment using the correct sales agreement.",
-        "Run unit tests in the .spec.ts files (Angular project).",
-        "Definition of Done (DoD): Ensure the story meets all acceptance criteria, tests pass, and documentation is updated.",
-        "Ensure all tests pass before committing.",
-        "Commit your changes.",
-        "Push the branch to Azure Repos."
+        "Pull the latest updates from the main branch to ensure your environment is current.",
+        "Navigate to Azure Repos and create a new branch for your work.",
+        "Use the appropriate naming convention: 'feature/' for new functionality or 'bug/' for fixes.",
+        "Name the branch as: [user-story-id]-[three-word-description] (e.g., 1234-update-user-profile).",
+        "Fetch and switch to the new branch in VS Code using Git or terminal.",
+        "Begin development work in your local environment.",
+        "Use the QA environment link to simulate staging or test with QA-specific data.",
+        "Use Sales Agreement Numbers provided for QA testing, or query the database to generate them.",
+        "Preview your changes locally using the correct sales agreement to simulate a full user flow.",
+        "Run and ensure all unit tests pass before committing your changes.",
+        "Definition of Done (DoD): The user story must meet all acceptance criteria.",
+        "Commit your changes with a clear message and push the branch to Azure Repos.",
+        "Move the work item in Azure Boards to ‘In Pull Request’."
       ]
     },
     {
       "id": 4,
       "stage": "In PR",
       "steps": [
-        "Create a PR with title: WI [user story number] | [Title of user story].",
-        "Add a description using bullet points:",
-        "  - What was changed",
-        "  - Any special considerations",
-        "  - Testing steps or notes",
-        "CI Triggered Automatically",
-        "When a PR is created or updated, the CI pipeline runs:",
-        "  - Builds the code",
-        "  - Runs automated tests (unit, integration, etc.)",
-        "  - Checks code quality (linters, formatters)",
-        "Peer Review",
-        "Developers pull the branch locally, test, and review the code.",
-        "If the CI pipeline fails, the PR is blocked until issues are resolved.",
-        "Once the code passes CI and is approved by reviewers, it can be merged."
+        "Create a pull request (PR) in Azure Repos with the title format: WI [user story number] | [short title of user story].",
+        "Write a clear PR description using bullet points:",
+        "  - What was changed (summary of implementation).",
+        "  - How to test the changes (QA steps, specific data, or environment notes).",
+
+        "Peer Review Process:",
+        "  - Teammates review the code, pull it locally if needed, and provide comments.",
+        "  - If any issues are found, developers fix them and push changes to the same branch.",
+        "  - Once all Code Review (CR) comments are addressed, the PR is approved and ready for merging."
       ]
     },
     {
@@ -287,20 +286,22 @@
       "id": 6,
       "stage": "In QA",
       "steps": [
-        "QA engineers validate the story against acceptance criteria.",
-        "Regression testing is performed on affected areas.",
-        "Bugs or issues are logged in Azure Boards and assigned to devs.",
-        "Item is either passed or sent back to 'In Dev Progress' for fixes."
+        "Test cases are reviewed with the QA team to ensure coverage of the user story and potential edge cases.",
+        "QA engineers validate the feature against the acceptance criteria.",
+        "If needed, regression testing is performed to ensure existing functionality is unaffected.",
+        "Any bugs found during QA are documented and linked back to the original work item or new bugs are created.",
+        "Once QA testing is complete and all issues are resolved, the item is marked as 'QA Passed'."
       ]
     },
     {
       "id": 7,
       "stage": "Done",
       "steps": [
-        "Work item has passed QA testing and meets Definition of Done.",
-        "Feature is included in production release or release candidate.",
-        "Documentation and changelogs are updated.",
-        "Item is closed in Azure Boards."
+        "The work item has passed QA testing and satisfies all aspects of the team's Definition of Done (DoD).",
+        "The feature is included in a staging build.",
+        "All relevant documentation (e.g., user guides, tech docs, API specs) is reviewed and updated.",
+        "Changelogs are updated to reflect the new feature, enhancement, or bug fix.",
+        "The Azure Boards work item is marked as 'Done' to reflect completion."
       ]
     }
   ]
