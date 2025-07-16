@@ -1,4 +1,4 @@
-.about-container {
+.about-section {
   max-width: 900px;
   margin: 3rem auto;
   padding: 2rem;
@@ -9,45 +9,45 @@
   color: #333;
 }
 
-.about-container h1 {
+.about-section h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #007acc;
 }
 
-.about-container p {
+.about-section p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
 }
 
-.section .lessons-container {
+.summer-in-a-bottle-container .lessons-distilled-container {
   margin-bottom: 2.5rem;
 }
 
-.section h2 {
+.summer-in-a-bottle-container h2 {
   font-size: 1.5rem;
   color: #005a9e;
   
   margin-bottom: 1rem;
 }
 
-.lessons-container h2 {
+.lessons-distilled-container h2 {
   font-size: 1.5rem;
   color: #009e1a;
   margin-bottom: 1rem;
 }
 
-.section ul {
+.summer-in-a-bottle-container ul {
   list-style: none;
   padding-left: 0;
 }
 
-.lessons-container ul {
+.lessons-distilled-container ul {
   list-style: none;
   padding-left: 0;
 }
 
-.section li {
+.summer-in-a-bottle-container li {
   background-color: #eef6fb;
   margin-bottom: 0.75rem;
   padding: 0.75rem 1rem;
@@ -56,7 +56,7 @@
   transition: background-color 0.3s ease;
 }
 
-.lessons-container li {
+.lessons-distilled-container li {
   background-color: #f4fbee;
   margin-bottom: 0.75rem;
   padding: 0.75rem 1rem;
@@ -65,10 +65,10 @@
   transition: background-color 0.3s ease;
 }
 
-.section li:hover {
+.summer-in-a-bottle-container li:hover {
   background-color: #d9efff;
 }
 
-.lessons-container li:hover {
+.lessons-distilled-container li:hover {
   background-color: #e5ffd9;
 }

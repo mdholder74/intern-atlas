@@ -2,9 +2,11 @@
   <div class="card-inner">
     <div class="card-front">{{event.title}}</div>
     <div class="card-back">
-      @for(item of event.items; track item){
+      @for(item of event.items; track item; let i = $index){
         <ul class="ul-styling">
-          <li class="li-spacing">{{item.trim()}}</li>
+          <li class="li-styling" [ngClass]="{'odd': i % 2 === 0, 'even': i % 2 !== 0}">
+            {{item.trim()}}
+          </li>
         </ul>
       }
     </div>

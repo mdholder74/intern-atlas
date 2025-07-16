@@ -1,36 +1,36 @@
-/* These styles can stay in agile-section.css or be moved here */
+/* card: Handles interaction (e.g., click to flip) and layout */
 .card {
   flex: 0 1 calc(20% - 40px);
   min-width: 200px;
   perspective: 1000px;
   position: relative;
 }
-
+/* Handles animation and visual transformation */
 .card-inner {
   width: 100%;
   height: 200px;
   text-align: center;
   transition: transform 0.6s;
-  transform-style: preserve-3d;
+  transform-style: preserve-3d;/* Enables children elements to be stacked on top of each other and rotates together when 3D position is happening */
   cursor: pointer;
 }
 
 .card.flipped .card-inner {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg);/* Flips the card */
 }
 
 .card-front,
 .card-back {
-  position: absolute;
+  position: absolute;/* Stacks the front and back of the card in the same space */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
+  backface-visibility: hidden;/* Hides the back side when flipped */
   border-radius: 20px;
   padding: 10px;
   box-shadow: 0 14px 8px rgba(35, 199, 2, 0.2);
-  box-sizing: border-box;
+  box-sizing: border-box;/* Ensures padding and border are included in the element's total width and height */
 }
 
 .card-front {
@@ -46,7 +46,7 @@
 .card-back {
   background: white;
   color: #333;
-  transform: rotateY(180deg);
+  transform: rotateY(180deg);/* Flips the back side to face the viewer when the card is flipped */
   font-size: 0.85em;
   padding: 20px;
   display: flex;
@@ -57,12 +57,26 @@
 
 }
 
-.li-spacing {
-  margin-bottom: 10px;
-}
-
 .ul-styling {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+li.odd {
+  background-color: #f9f9f9;
+}
+
+li.even {
+  background-color: #ebda45;
+  color: white;
+
+}
+
+li {
+  padding: 2px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  list-style-type: none;
+  text-decoration: none;
 }

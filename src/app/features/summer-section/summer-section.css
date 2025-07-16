@@ -19,6 +19,7 @@ header p {
   font-size: 16px;
 }
 
+/* Cx-team section*/
 .cx-team {
   display: inline-block;
   margin-right: 12px;
@@ -33,24 +34,12 @@ header p {
   transition: background-color 0.2s ease;
 }
 
-.s-spacing {
+.spaced-section {
   text-align: center;
   margin-top: 50px;
 }
 .heading {
   font-size: 2em;
-}
-
-.content-green {
-  background-color: #a9ff70;
-  border-radius: 30px;
-  padding: 30px 20px 30px 20px;
-}
-
-.content-blue {
-  background-color: #68e6ff;
-  border-radius: 30px;
-  padding: 30px 20px 30px 20px;
 }
 
 .highlight-blue {
@@ -67,6 +56,19 @@ header p {
   background-color: #eefbee;
   padding: 2px 4px;
   border-radius: 4px;
+}
+
+.content-card-green {
+  background-color: #a9ff70;
+  border-radius: 30px;
+  padding: 30px 20px 30px 20px;
+}
+
+/* Summer Contributions Section */
+.content-card-blue {
+  background-color: #68e6ff;
+  border-radius: 30px;
+  padding: 30px 20px 30px 20px;
 }
 
 .dev-doc-button {
@@ -86,40 +88,38 @@ header p {
   background-color: #00d435;
 }
 
-.p-spacing {
+.paragraph-spacing {
   margin-bottom: 50px;
 }
 
-/* Handles the laying out multiple cards in a responsive, flexible grid */
-.card-grid-agile {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: space-evenly !important;
-  gap: 20px !important;
+/* Agile Section */
+.agile-card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: space-evenly;
+  gap: 20px;
 }
 
-
-
-
-.container-wrap-up {
+/* Final Twist of the Cap Section */
+.goodbye-container {
   display: flex;
   flex-wrap: nowrap; /* Prevent wrapping to keep it side-by-side */
-  height: auto; /* Let it size based on content */
-  max-height: 600px; /* Limit the height */
-  overflow: hidden; /* Hide overflow if needed */
+  height: auto; 
+  max-height: 600px; 
+  overflow: hidden; 
   margin: 40px 0;
 }
 
-.left,
-.right {
-  flex: 1;
+.left-container,
+.right-container {
+  flex: 1; /* Allow both containers to take equal space */
   padding: 20px;
   box-sizing: border-box;
   border-color: #68e6ff;
   border-style: double;
 }
 
-.left {
+.left-container {
   background-color: #a9ff70;
   display: flex;
   align-items: center;
@@ -130,10 +130,10 @@ header p {
   text-align: center;
 }
 
-.right {
+.right-container {
   background-color: #ffffff;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;/* Stack content vertically */
   justify-content: center;
 }
 

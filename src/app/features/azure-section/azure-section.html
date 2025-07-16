@@ -1,12 +1,16 @@
-<div class="card-grid-azure">
-  <div class="card-azure" onclick="this.classList.toggle('expanded')">
-    <div class="card-header"><small>{{stage.stage}}</small></div>
-    <div class="card-content">
-      @for (step of stage.steps; track step){
+<div>
+  <div class="azure-card-container" onclick="this.classList.toggle('expanded')">
+    <div class="azure-card-front"><small>{{stage.stage}}</small></div>
+    <div class="azure-card-content">
       <ul>
-        <li>{{step.trim( )}}</li>
+        @for (step of stage.steps; track step; let i = $index) {
+          <li [ngClass]="{ 'odd': i % 2 === 0, 'even': i % 2 !== 0 }">
+            {{ step.trim() }}
+          </li>
+        }
       </ul>
-      }
     </div>
   </div>
 </div>
+
+

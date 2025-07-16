@@ -197,11 +197,11 @@
       "id": 103,
       "title": "Refinement",
       "items": [
-        "Discuss Details",
-        "Acceptance Criteria (AC)",
+        "Review Details",
+        "Acceptance Criteria",
         "Implementation Analysis",
         "Estimation of Work",
-        "Discuss Average Vote Count",
+        "Average Vote Count",
         "Testing Options"
       ]
     },
@@ -209,10 +209,9 @@
       "id": 104,
       "title": "Retrospective",
       "items": [
-        "Feedback (Anonymous)",
-        "Sprint Reflection",
-        "Input & Open Feedback",
-        "Review Key Outcomes",
+        "What went Well",
+        "What didn't Go Well",
+        "What can we Improve",
         "Action Items & Ownership"
       ]
     }
