@@ -181,13 +181,20 @@
     {
       "id": 101,
       "title": "Sprint Planning",
-      "items": ["Team Sync Updates", "Sprint Demo", "Sprint Planning Goals"]
+      "items": [
+        "Team Sync",
+        "Sprint Goal Definition",
+        "Review Product Backlog",
+        "Select Work for the Sprint",
+        "Task Breakdown",
+        "Commitment to work"
+      ]
     },
     {
       "id": 102,
       "title": "Daily Stand-up",
       "items": [
-        "Quick team sync",
+        "15-minute team sync",
         "What was accomplished yesterday",
         "What is planned for today",
         "Any blockers or issues"
@@ -201,18 +208,19 @@
         "Acceptance Criteria",
         "Implementation Analysis",
         "Estimation of Work",
-        "Average Vote Count",
-        "Testing Options"
+        "Agree on Story Points",
+        "Testing Considerations"
       ]
     },
     {
       "id": 104,
       "title": "Retrospective",
       "items": [
+        "Sprint Demo",
         "What went Well",
         "What didn't Go Well",
         "What can we Improve",
-        "Action Items & Ownership"
+        "Action Items"
       ]
     }
   ],
@@ -296,10 +304,8 @@
       "id": 7,
       "stage": "Done",
       "steps": [
+        "All relevant documentation (e.g., user guides, tech wikis) is reviewed and updated.",
         "The work item has passed QA testing and satisfies all aspects of the team's Definition of Done (DoD).",
-        "The feature is included in a staging build.",
-        "All relevant documentation (e.g., user guides, tech docs, API specs) is reviewed and updated.",
-        "Changelogs are updated to reflect the new feature, enhancement, or bug fix.",
         "The Azure Boards work item is marked as 'Done' to reflect completion."
       ]
     }
