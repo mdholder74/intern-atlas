@@ -71,7 +71,7 @@ header p {
   padding: 30px 20px 30px 20px;
 }
 
-.dev-doc-button {
+.dev-doc-anchor {
   background-color: #0078d4;
   color: white;
   border: none;
@@ -81,10 +81,11 @@ header p {
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.9rem;
+  text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
-.dev-doc-button:hover {
+.dev-doc-anchor:hover {
   background-color: #00d435;
 }
 
