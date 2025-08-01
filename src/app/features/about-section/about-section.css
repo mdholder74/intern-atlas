@@ -12,7 +12,7 @@
 .about-section h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #007acc;
+  /* color: #aa00cc; */
 }
 
 .about-section p {
@@ -26,14 +26,14 @@
 
 .summer-in-a-bottle-container h2 {
   font-size: 1.5rem;
-  color: #005a9e;
+  color: #aa00cc;
   
   margin-bottom: 1rem;
 }
 
 .lessons-distilled-container h2 {
   font-size: 1.5rem;
-  color: #009e1a;
+  color: #d40086;
   margin-bottom: 1rem;
 }
 
@@ -48,19 +48,19 @@
 }
 
 .summer-in-a-bottle-container li {
-  background-color: #eef6fb;
+  background-color: #f9eefb;
   margin-bottom: 0.75rem;
   padding: 0.75rem 1rem;
-  border-left: 5px solid #007acc;
+  border-left: 5px solid #aa00cc;
   border-radius: 6px;
   transition: background-color 0.3s ease;
 }
 
 .lessons-distilled-container li {
-  background-color: #f4fbee;
+  background-color: #fbeef6;
   margin-bottom: 0.75rem;
   padding: 0.75rem 1rem;
-  border-left: 5px solid #00d435;
+  border-left: 5px solid #d40086;
   border-radius: 6px;
   transition: background-color 0.3s ease;
 }
