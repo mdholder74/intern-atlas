@@ -1,7 +1,11 @@
-<h2>Commit to a Course and Make It Official!</h2>
+
 
 <form [formGroup]="commitForm" (ngSubmit)="onSubmit()">
   <div class="form-group">
+    <div class="form-header">
+      <h2>Commit to a Course </h2>
+      <p>Make your commitment official by signing up below!</p>
+    </div>
     <label for="name">NAME:</label>
     <input id="name" type="text" formControlName="name" />
     @if(name?.invalid && (name?.dirty || name?.touched)) {

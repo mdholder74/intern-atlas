@@ -14,11 +14,25 @@ form:hover {
   transform: translateY(-5px);
 }
 
-h2 {
+.form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  font-size: 2.3rem;
-  color: #2c3e50;
-  margin: 50px;
+  height: 100px; 
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #f0f0f0;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.form-header p {
+  font-size: 0.9rem; 
+  margin: 0;
+  color: #f0f0f0; 
+  font-weight: 500;
 }
 
 .form-group {
@@ -36,7 +50,7 @@ input,
 select {
   width: 100%;
   padding: 10px 14px;
-  border: 1px solid #ccd6f6; /* soft bluish border */
+  border: 1px solid #ccd6f6; 
   border-radius: 8px;
   font-size: 1rem;
   box-sizing: border-box;
@@ -48,15 +62,16 @@ select {
 
 input:focus,
 select:focus {
-  border-color: #667eea; /* match your gradient button */
+  border-color: #667eea; 
   background-color: #fff;
   outline: none;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2); /* gentle glow */
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2); 
 }
 
 button[type="submit"] {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  color: #f0f0f0; 
+  font-weight: 500;
   border: none;
   padding: 10px 16px;
   margin-top: 15px;
