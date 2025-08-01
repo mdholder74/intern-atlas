@@ -29,12 +29,12 @@
   backface-visibility: hidden;/* Hides the back side when flipped */
   border-radius: 20px;
   padding: 10px;
-  box-shadow: 0 14px 8px rgba(35, 199, 2, 0.2);
+  box-shadow: 0 5px 20px rgba(237, 151, 197, 0.2);
   box-sizing: border-box;/* Ensures padding and border are included in the element's total width and height */
 }
 
 .card-front {
-  background: #ebda45;
+  background:  #ed97c5;
   color: white;
   display: flex;
   align-items: center;
@@ -68,7 +68,7 @@ li.odd {
 }
 
 li.even {
-  background-color: #ebda45;
+  background-color:  #ed97c5;
   color: white;
 
 }
