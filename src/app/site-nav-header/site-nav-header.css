@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1e2a38;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 15px 30px;
-  color: white;
+  color: #f0f0f0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -20,7 +20,7 @@
 
 .nav-links a:hover,
 .auth-links a:hover {
-  color: #00b4d8;
+  color: #ed97c5;
 }
 
 .active {
