@@ -9,7 +9,7 @@
       "personalNotesUrl": "https://pulte-my.sharepoint.com/:w:/p/maholder/EU4qACWr1R9GuhCzX078KEkBmJbUQ36nnm4fkNLIPHr8gA?email=mdholder74%40gmail.com&e=YTiQeC",
       "officialDocsUrl": "https://angular.dev/installation",
       "linkedInVideoUrl": "https://www.linkedin.com/learning/learning-angular-25357291/learning-angular?resume=false&u=262938922",
-      "review": "Great course! Clear explanations and practical examples. Helped me understand how Signals differ from RxJS.",
+      "review": "I feel the setup instructions are clear and straightforward. I had initial confusion between traditional and standalone components.",
       "tags": ["angular ", "setup ", "cli ", "environment "],
       "codeSnippet": "ng new angular-app-name --routing",
       "img": "favicon.ico"
@@ -23,7 +23,7 @@
       "personalNotesUrl": "https://pulte-my.sharepoint.com/:w:/p/maholder/EX6SqgHf7etCiUBhk0ToUxkBOqN-E85exfidRrn2tiAIrA?e=yZyexO",
       "officialDocsUrl": "https://angular.dev/guide/components",
       "linkedInVideoUrl": "https://www.linkedin.com/learning/learning-angular-25357291/learning-angular?resume=false&u=262938922",
-      "review": "Solid breakdown of component architecture. Loved the examples and visual explanations.",
+      "review": "Traditional components felt organized and easy to follow. It was a good introduction to Angular's structure.",
       "tags": ["angular", "components", "architecture"],
       "codeSnippet": "ng new angular-app-name --no-standalone",
       "img": "favicon.ico"
@@ -37,7 +37,7 @@
       "personalNotesUrl": "https://pulte-my.sharepoint.com/:w:/p/maholder/EbWVAQEt6clNg4FOj6DjT_0BE1hzYFiW496P2kDFuQyQ2A?e=pEBArL",
       "officialDocsUrl": "https://angular.dev/guide/ngmodules/overview",
       "linkedInVideoUrl": "https://www.linkedin.com/learning/learning-angular-25357291/learning-angular?resume=false&u=262938922",
-      "review": "Helped me understand when to use standalone components and how they simplify module management.",
+      "review": "Standalone components simplified the structure by removing the need for NgModules but took some time to get used to.",
       "tags": ["angular", "standalone", "modules"],
       "codeSnippet": "ng new angular-app-name --routing",
       "img": "favicon.ico"
@@ -51,7 +51,7 @@
       "personalNotesUrl": "https://pulte-my.sharepoint.com/:w:/p/maholder/ERt6Sa8K_hlPvgT7x-qexNYB2ElfrdJOdat1LjY0x7C7aA?e=9bWr4q",
       "officialDocsUrl": "https://angular.dev/guide/templates/binding",
       "linkedInVideoUrl": "https://www.linkedin.com/learning/learning-angular-25357291/learning-angular?resume=false&u=262938922",
-      "review": "Covers all titles of binding clearly—property, event, and two-way.",
+      "review": "Binding required some extra attention at first, I really had to focus on the difference between property and event binding.",
       "tags": ["angular", "binding", "data"],
       "codeSnippet": "<[src]=\"imageUrl\" (click)=\"onClick()\">",
       "img": "favicon.ico"
@@ -65,7 +65,7 @@
       "personalNotesUrl": "https://pulte-my.sharepoint.com/:w:/p/maholder/EX7sZfCwHQhKnzIN-97M7JoBxNImanMiF17J-0QaeRYpOA?e=gmr2Aj",
       "officialDocsUrl": "https://angular.dev/guide/di",
       "linkedInVideoUrl": "https://www.linkedin.com/learning/learning-angular-25357291/learning-angular?resume=false&u=262938922",
-      "review": "DI is powerful once you understand providers and injectors.",
+      "review": "Dependency Injection took a bit of time to understand, but once I understood how it interacted with components, it clicked.",
       "tags": ["angular", "di", "services"],
       "codeSnippet": "constructor(private http: HttpClient) {}",
       "img": "favicon.ico"
@@ -79,7 +79,7 @@
       "personalNotesUrl": "https://pulte-my.sharepoint.com/:w:/p/maholder/EaWGsN0Y82NMjdUKk2PvuewBTytPCXvtZJPSI5GRUoPnRQ?e=D7ieSK",
       "officialDocsUrl": "https://angular.dev/guide/http/making-requests#http-observables",
       "linkedInVideoUrl": "https://www.linkedin.com/learning/learning-angular-25357291/learning-angular?resume=false&u=262938922",
-      "review": "This course provides a solid foundation in using Observables within Angular. The explanations are clear, and the examples are practical, especially the sections on HTTP requests and reactive forms. ",
+      "review": "Observables were a challenging concept initially, but understanding how they interact with services made things clearer ",
       "tags": ["angular", "observables", "architecture"],
       "codeSnippet": "getCourses(): Observable<Course[]> {}",
       "img": "favicon.ico"
@@ -93,7 +93,7 @@
       "personalNotesUrl": "https://pulte-my.sharepoint.com/:w:/p/maholder/Ef0L5QPwdIhDh6O5mwUsDT8BSFd4XixbgPtUKibjGv6YMg?e=YWEdca",
       "officialDocsUrl": "https://www.titlescriptlang.org/docs/handbook/interfaces.html",
       "linkedInVideoUrl": "https://www.linkedin.com/learning/learning-angular-25357291/learning-angular?resume=false&u=262938922",
-      "review": "Interfaces help enforce structure and improve title safety.",
+      "review": "Interfaces were one of the more straightforward topics. They helped define the structure of data and improved code consistency.",
       "tags": ["titlescript", "interfaces", "typing"],
       "codeSnippet": "interface Course { title: string; duration: string; }",
       "img": "favicon.ico"
@@ -107,7 +107,7 @@
       "personalNotesUrl": "https://pulte-my.sharepoint.com/:w:/p/maholder/EWk_eXAQUxNCu0mquUqx55UBqCQ3vdI9djOP5M6bYrzy5A?e=Qtci4r",
       "officialDocsUrl": "https://angular.dev/guide/routing",
       "linkedInVideoUrl": "https://www.linkedin.com/learning/learning-angular-25357291/learning-angular?resume=false&u=262938922",
-      "review": "Routing was tricky at first, but guards and lazy loading made it click.",
+      "review": "Routing took some practice. Once everything was connected properly, the flow made a lot more sense",
       "tags": ["angular", "routing", "navigation"],
       "codeSnippet": "path: 'dashboard', component: DashboardComponent",
       "img": "favicon.ico"
@@ -121,7 +121,7 @@
       "personalNotesUrl": "https://pulte-my.sharepoint.com/:w:/p/maholder/ETMwO2Wy501MooBVP2HgDm0Bs_q0p04aMtYoSMOgfzcQXg?e=3irLJZ",
       "officialDocsUrl": "https://angular.dev/guide/forms",
       "linkedInVideoUrl": "https://www.linkedin.com/learning/learning-angular-25357291/learning-angular?resume=false&u=262938922",
-      "review": "Reactive forms are powerful for validation and dynamic controls.",
+      "review": "Pretty straightforward and provides flexibility with dynamic inputs and validation.",
       "tags": ["angular", "forms", "reactive"],
       "codeSnippet": "this.form = new FormGroup({ name: new FormControl('') });",
       "img": "favicon.ico"
@@ -135,7 +135,7 @@
       "personalNotesUrl": "https://pulte-my.sharepoint.com/:w:/p/maholder/EUlGHXl5Hr1MpAv71ozZHPkBNZOnoL424hzifdL9g-LDfg?e=tlyRkG",
       "officialDocsUrl": "https://rxjs.dev/guide/operators",
       "linkedInVideoUrl": "https://www.linkedin.com/learning/learning-angular-25357291/learning-angular?resume=false&u=262938922",
-      "review": "RxJS is a beast, but once you get map, mergeMap, and switchMap, it’s 🔥.",
+      "review": "RxJS Operators took some time to master, but learning to use map, switchMap, and mergeMap effectively made working with observables much easier",
       "tags": ["rxjs", "observables", "operators"],
       "codeSnippet": "source$.pipe(map(val => val * 2))",
       "img": "favicon.ico"
@@ -163,7 +163,7 @@
       "personalNotesUrl": "https://pulte-my.sharepoint.com/:w:/p/maholder/EQmlfz-xClhOjw6FhsdaT4ABswVDOw6XNIlYfdsLbvpZcA?e=aUS0Jk",
       "officialDocsUrl": "https://angular.io/",
       "linkedInVideoUrl": "https://www.linkedin.com/learning/learning-angular-25357291/learning-angular?resume=false&u=262938922",
-      "review": "A fun wrap-up of random but useful Angular tricks.",
+      "review": "The Extras section was a great way to explore additional features like pipes and image handling.",
       "tags": ["angular", "extras", "tips"],
       "codeSnippet": "<img [src]=\"imageUrl\"> {{ birthday | date:'longDate' }}",
       "img": "favicon.ico"
