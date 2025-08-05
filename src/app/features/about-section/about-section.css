@@ -20,33 +20,50 @@
   margin-bottom: 2rem;
 }
 
-.summer-in-a-bottle-container .lessons-distilled-container {
+.summer-in-a-bottle-container .summer-stack-container .summer-goals-container {
   margin-bottom: 2.5rem;
 }
 
+.summer-goals-container h2 {
+  font-size: 1.5rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+}
 .summer-in-a-bottle-container h2 {
   font-size: 1.5rem;
   color: #aa00cc;
-  
+
   margin-bottom: 1rem;
 }
 
-.lessons-distilled-container h2 {
+.summer-stack-container h2 {
   font-size: 1.5rem;
   color: #d40086;
   margin-bottom: 1rem;
 }
 
+.summer-goals-container ul {
+  list-style: none;
+  padding-left: 0;
+}
 .summer-in-a-bottle-container ul {
   list-style: none;
   padding-left: 0;
 }
 
-.lessons-distilled-container ul {
+.summer-stack-container ul {
   list-style: none;
   padding-left: 0;
 }
 
+.summer-goals-container li {
+  background-color: #dde1f7;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-left: 5px solid #667eea;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
 .summer-in-a-bottle-container li {
   background-color: #f9eefb;
   margin-bottom: 0.75rem;
@@ -56,7 +73,7 @@
   transition: background-color 0.3s ease;
 }
 
-.lessons-distilled-container li {
+.summer-stack-container li {
   background-color: #fbeef6;
   margin-bottom: 0.75rem;
   padding: 0.75rem 1rem;
@@ -65,10 +82,13 @@
   transition: background-color 0.3s ease;
 }
 
-.summer-in-a-bottle-container li:hover {
+.summer-goals-container li:hover {
   background-color: #d9efff;
 }
+.summer-in-a-bottle-container li:hover {
+  background-color: #e3d9ff;
+}
 
-.lessons-distilled-container li:hover {
-  background-color: #e5ffd9;
+.summer-stack-container li:hover {
+  background-color: #ffd9e8;
 }
