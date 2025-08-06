@@ -199,6 +199,8 @@ header p {
   text-align: center;
   color: white;
   position: relative;
+  cursor:pointer;
+  overflow: hidden;
 }
 
 .left-container::before {
@@ -208,6 +210,19 @@ header p {
   left: 30px;
   font-size: 4em;
   opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
 }
 
 .left-container::after {
@@ -219,10 +234,24 @@ header p {
   opacity: 0.3;
 }
 
+.left-container:hover .hover-image {
+  opacity: 0.9; 
+}
+
+.left-container:hover .text-content {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); 
+  transform: scale(1.05); 
+}
+
+.left-container:hover::before,
+.left-container:hover::after {
+  opacity: 0.1; 
+}
+
 .right-container {
   background-color: #ffffff;
   display: flex;
-  flex-direction: column; /* Stack content vertically */
+  flex-direction: column; 
   justify-content: center;
 }
 
