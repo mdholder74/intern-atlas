@@ -2,7 +2,7 @@ export interface Course {
   id: number;
   title: string;
   description: string;
-  duration: string; // in hours
+  estimatedEffort: string; // in hours
   difficulty: string; // e.g., "beginner", "intermediate", "advanced"
   personalNotesUrl?: string; // URL to personal notes
   officialDocsUrl?: string; // URL to official documentation
