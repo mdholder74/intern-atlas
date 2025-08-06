@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Course } from '../../models/course.model';
 import { CourseService } from '../../services/course';
 import { ActivatedRoute } from '@angular/router';
@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CourseDetail implements OnInit {
   course: Course | null = null;
+  @Input() swaggerUrl?: string;
 
   constructor(
     private courseService: CourseService,

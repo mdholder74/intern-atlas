@@ -54,7 +54,7 @@
 }
 
 /* Enhanced link section */
-.course-detail-container p a {
+.course-detail-container  a {
   display: inline-block;
   margin-right: 12px;
   margin-top: 6px;
