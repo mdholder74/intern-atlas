@@ -175,6 +175,7 @@
       "personalNotesUrl": "https://pulte-my.sharepoint.com/:w:/p/maholder/EX6SqgHf7etCiUBhk0ToUxkBOqN-E85exfidRrn2tiAIrA?e=yZyexO",
       "officialDocsUrl": "https://learn.microsoft.com/en-us/training/modules/build-web-api-aspnet-core/1-introduction",
       "linkedInVideoUrl": "https://www.linkedin.com/learning/building-web-apis-with-asp-dot-net-core-8/welcome",
+      "swaggerUrl": "https://localhost:5001/swagger/index.html",
       "review": "C# Web APIs are challenging; it's a lot of moving parts but once you get the hang of it, it's very rewarding.",
       "tags": ["c#", ".net", "webapi"],
       "codeSnippet": "[HttpGet] public IEnumerable<Course> GetCourses() { }",
