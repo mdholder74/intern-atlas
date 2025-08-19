@@ -1,0 +1,36 @@
+@if(course){
+<div class="course-detail-container">
+  <img [src]="course.img" [alt]="course.title" width="100" height="100" />
+  <h1>{{course.title}}</h1>
+  <p><strong>DESCRIPTION:</strong> {{course.description}}</p>
+  <p><strong>ESTIMATED EFFORT:</strong> {{course.estimatedEffort}}</p>
+  <p><strong>DIFFICULTY:</strong> {{course.difficulty}}</p>
+    <strong>RESOURCES: </strong>
+    <a href="{{course.personalNotesUrl}}" target="_blank"
+      >Moe's Personal Notes</a
+    >
+    <a href="{{course.officialDocsUrl}}" target="_blank">
+      Official Documentation</a
+    >
+    <a href="{{course.linkedInVideoUrl}}" target="_blank">Video Resource</a>
+ 
+  @if (course.swaggerUrl) {
+    <a id="swagger-demo" href="{{course.swaggerUrl}}" target="_blank">Swagger API Demo</a>
+  }
+  <p><strong> MOE'S REVIEW:</strong> {{course.review}}</p>
+  <p><strong>TAGS:</strong></p>
+  @for (tag of course.tags; track tag) {
+  <span>{{ tag.trim() }}</span>
+
+  } @if(course.codeSnippet) {
+  <div class="code-section">
+    <h3>CODE EXAMPLE:</h3>
+    <app-code-snippet
+      [code]="course.codeSnippet"
+      [title]="course.title + ' Example'"
+    >
+    </app-code-snippet>
+  </div>
+  }
+</div>
+}
