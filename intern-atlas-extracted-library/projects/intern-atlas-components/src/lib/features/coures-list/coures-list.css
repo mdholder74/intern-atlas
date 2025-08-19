@@ -1,0 +1,9 @@
+.course-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: auto; /* This ensures all cards in a row have the same height */
+  gap: 50px;
+  padding: 16px;
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
